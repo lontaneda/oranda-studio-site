@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Oranda Studio es un estudio boutique e independiente de diseño digital: apps, UX/UI, websites y branding.">
+  <meta name="theme-color" content="#fdfaf4">
+  <title>Oranda Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/oranda-fish.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <div class="intro-shell">
+      <img class="pond-art pond-art--top" src="assets/leaf-top-right.png" alt="" aria-hidden="true">
+      <img class="pond-art pond-art--left" src="assets/leaf-left.png" alt="" aria-hidden="true">
+      <img class="pond-art pond-art--right" src="assets/leaf-right.png" alt="" aria-hidden="true">
+
+      <header class="site-header" aria-label="Navegación principal">
+        <nav class="nav-wrap">
+          <a class="nav-link nav-link--active" href="#sobre-nosotros">Sobre Nosotros</a>
+          <a class="nav-link" href="#proyectos">Proyectos</a>
+          <a class="nav-link" href="#contacto">Contacto</a>
+        </nav>
+      </header>
+
+      <section class="hero" aria-labelledby="hero-title">
+        <h1 id="hero-title" class="visually-hidden">Oranda Studio</h1>
+        <img class="brand-logo" src="assets/oranda-logo.png" alt="Oranda Studio">
+        <p class="hero-copy">
+          Somos un estudio boutique e independiente de diseño digital. Creamos apps, experiencias UX/UI, websites y branding desde una mirada fresca, estratégica y diferente.
+        </p>
+      </section>
+
+      <section class="about page-width" id="sobre-nosotros" aria-labelledby="about-title">
+        <h2 id="about-title">Sobre Nosotros</h2>
+        <div class="about-copy">
+          <p>Nuestra experiencia combina diseño y programación, permitiéndonos entender cada proyecto como un sistema completo: desde la arquitectura de la información y la experiencia de usuario hasta el sistema visual y su implementación.</p>
+          <p>Nos involucramos hasta donde cada proyecto lo permita, buscando que cada decisión tenga una razón detrás y funcione igual de bien en diseño que en código.</p>
+          <p>Diseñamos pensando en cómo se construye. Construimos entendiendo por qué se diseñó así.</p>
+        </div>
+      </section>
+    </div>
+
+    <section class="projects" id="proyectos" aria-labelledby="projects-title">
+      <div class="page-width projects-intro">
+        <h2 id="projects-title">Proyectos</h2>
+        <p>Proyectos digitales construidos desde la estrategia, el diseño y el desarrollo.</p>
+      </div>
+
+      <div class="project-grid" aria-label="Proyectos seleccionados">
+        <article class="project-card" aria-label="Proyecto Sailtrim">
+          <img src="assets/project-3.webp" alt="Mockup de la aplicación Sailtrim en dos teléfonos" loading="lazy">
+          <span class="project-tint" aria-hidden="true"></span>
+        </article>
+        <article class="project-card" aria-label="Proyecto Sunnie">
+          <img src="assets/project-1.webp" alt="Identidad visual Sunnie aplicada a empaque" loading="lazy">
+          <span class="project-tint" aria-hidden="true"></span>
+        </article>
+        <article class="project-card" aria-label="Proyecto Parke Natura">
+          <img src="assets/project-2.webp" alt="Identidad visual Parke Natura aplicada a contenedores" loading="lazy">
+          <span class="project-tint" aria-hidden="true"></span>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact page-width" id="contacto" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contacto</h2>
+      <p class="contact-intro">Cuéntanos qué tienes en mente. Nos encantará conocer tu proyecto y encontrar juntos la mejor forma de llevarlo a cabo.</p>
+
+      <form class="contact-form" id="contact-form" novalidate>
+        <div class="form-row">
+          <label>
+            <span>Nombre</span>
+            <input type="text" name="nombre" autocomplete="given-name" required>
+          </label>
+          <label>
+            <span>Apellido</span>
+            <input type="text" name="apellido" autocomplete="family-name" required>
+          </label>
+        </div>
+
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+
+        <label>
+          <span>Mensaje</span>
+          <textarea name="mensaje" rows="6" required></textarea>
+        </label>
+
+        <button type="submit">Enviar</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Todos los derechos reservados a Oranda Studio.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
