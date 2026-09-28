@@ -155,9 +155,9 @@ section[id] {
 }
 .pond-art--fish {
   z-index: 1;
-  display: flex;
-  justify-content: center; /* Horizontally centers the image */
-  align-items: center;     /* Vertically centers the image (if container has height) */
+  width: clamp(350px, 30vw, 440px);
+  top: 440px;
+  right: clamp(170px, 19vw, 330px);
 }
 .mobile-pond {
   display: none;
