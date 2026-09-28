@@ -6,22 +6,22 @@
   <meta name="description" content="Oranda Studio es un estudio boutique e independiente de diseño digital: apps, UX/UI, websites y branding.">
   <meta name="theme-color" content="#fdfaf4">
   <title>Oranda Studio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/oranda-fish.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#sobre-nosotros">Saltar al contenido</a>
   <main>
     <div class="intro-shell">
+      <img class="mobile-pond" src="assets/mobile-pond.svg" alt="" aria-hidden="true">
+      <img class="pond-art pond-art--fish" src="assets/oranda-fish-design.svg" alt="" aria-hidden="true" style="display: block; margin-inline: auto;">
       <img class="pond-art pond-art--top" src="assets/leaf-top-right.png" alt="" aria-hidden="true">
       <img class="pond-art pond-art--left" src="assets/leaf-left.png" alt="" aria-hidden="true">
       <img class="pond-art pond-art--right" src="assets/leaf-right.png" alt="" aria-hidden="true">
 
       <header class="site-header" aria-label="Navegación principal">
         <nav class="nav-wrap">
-          <a class="nav-link nav-link--active" href="#sobre-nosotros">Sobre Nosotros</a>
+          <a class="nav-link" href="#sobre-nosotros">Sobre Nosotros</a>
           <a class="nav-link" href="#proyectos">Proyectos</a>
           <a class="nav-link" href="#contacto">Contacto</a>
         </nav>
@@ -29,7 +29,7 @@
 
       <section class="hero" aria-labelledby="hero-title">
         <h1 id="hero-title" class="visually-hidden">Oranda Studio</h1>
-        <img class="brand-logo" src="assets/oranda-logo.png" alt="Oranda Studio">
+        <img class="brand-logo" src="assets/oranda-logo.svg" alt="Oranda Studio">
         <p class="hero-copy">
           Somos un estudio boutique e independiente de diseño digital. Creamos apps, experiencias UX/UI, websites y branding desde una mirada fresca, estratégica y diferente.
         </p>
@@ -54,34 +54,26 @@
       <div class="project-grid" aria-label="Proyectos seleccionados">
         <article class="project-card" aria-label="Proyecto Sailtrim">
           <img src="assets/project-3.webp" alt="Mockup de la aplicación Sailtrim en dos teléfonos" loading="lazy">
-          <span class="project-tint" aria-hidden="true"></span>
+          <h3 class="project-name">Sailtrim</h3>
         </article>
-        <article class="project-card" aria-label="Proyecto Sunnie">
-          <img src="assets/project-1.webp" alt="Identidad visual Sunnie aplicada a empaque" loading="lazy">
-          <span class="project-tint" aria-hidden="true"></span>
+        <article class="project-card" aria-label="Proyecto Sunne">
+          <img src="assets/project-1.webp" alt="Identidad visual Sunne aplicada a empaque" loading="lazy">
+          <h3 class="project-name">Sunne</h3>
         </article>
         <article class="project-card" aria-label="Proyecto Parke Natura">
           <img src="assets/project-2.webp" alt="Identidad visual Parke Natura aplicada a contenedores" loading="lazy">
-          <span class="project-tint" aria-hidden="true"></span>
+          <h3 class="project-name">Parke Natura</h3>
         </article>
       </div>
     </section>
 
-    <section class="contact page-width" id="contacto" aria-labelledby="contact-title">
+    <section class="contact" id="contacto" aria-labelledby="contact-title">
       <h2 id="contact-title">Contacto</h2>
-      <p class="contact-intro">Cuéntanos qué tienes en mente. Nos encantará conocer tu proyecto y encontrar juntos la mejor forma de llevarlo a cabo.</p>
-
-      <form class="contact-form" id="contact-form" novalidate>
-        <div class="form-row">
-          <label>
-            <span>Nombre</span>
-            <input type="text" name="nombre" autocomplete="given-name" required>
-          </label>
-          <label>
-            <span>Apellido</span>
-            <input type="text" name="apellido" autocomplete="family-name" required>
-          </label>
-        </div>
+      <form class="contact-form" id="contact-form" data-endpoint="" novalidate>
+        <label>
+          <span>Nombre y apellido</span>
+          <input type="text" name="nombre" autocomplete="name" required maxlength="160">
+        </label>
 
         <label>
           <span>Email</span>
@@ -90,10 +82,11 @@
 
         <label>
           <span>Mensaje</span>
-          <textarea name="mensaje" rows="6" required></textarea>
+          <textarea name="mensaje" rows="6" required maxlength="10000"></textarea>
         </label>
 
-        <button type="submit">Enviar</button>
+        <button type="submit" disabled>Enviar</button>
+        <p class="form-note">El envío de mensajes aún no está disponible.</p>
         <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
       </form>
     </section>
